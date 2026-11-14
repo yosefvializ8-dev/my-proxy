@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="perf-mode">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>College - Recommendations</title>
+<link rel="icon" type="image/svg+xml" href="classroom-home.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="landing" class="landing-screen">
+  <iframe
+    id="aceFrame"
+    class="ace-frame"
+    title="ACE Early College website"
+    loading="eager"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="fullscreen"
+  ></iframe>
+
+
+  <div class="ace-fallback">
+    <span>Can’t see the embedded page?</span>
+    <a id="aceOpenLink" href="#" target="_blank" rel="noopener noreferrer">Open ACE directly ↗</a>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mic" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1A7 7 0 0 0 19 11z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></g></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
+  </svg>
+
+<main id="app" hidden>
+  <form id="searchForm" class="bar" autocomplete="off">
+    <button type="button" id="modeBtn" class="ic find" aria-pressed="false" aria-label="Switch to web address mode" title="Switch to web address mode"><svg><use href="#i-search"/></svg></button>
+    <input id="searchInput" data-auto="1" type="text" placeholder="Search the web" aria-label="Search">
+    <div class="dd"><button type="button" id="engineBtn" class="ic" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose search engine"><svg><use href="#i-chev"/></svg></button><ul id="engineMenu" role="listbox" hidden></ul></div>
+    <button type="button" class="ic mic" data-target="searchInput" aria-label="Voice search"><svg><use href="#i-mic"/></svg></button>
+  </form>
+</main>
+
+
+<div id="toast" role="status"></div>
+
+<script src="settings.js"></script>
+<script src="search.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
